@@ -4,7 +4,7 @@
 -@autor="jarp"
 -@lang= "en"
 -@title= "Hello World!"
--@description= "My awesome template"
+-@description= "My awesome website"
 -@keywords="keyword1, keyword2, keywordn"
 
 -# Basic libraries
@@ -14,8 +14,6 @@
 -@jQueryV="3.1.1"
 -@FontAwesomeV="4.7.0"
 
--# Basic nav items/sections
--menu =["section-1", "section-2", "section-3", "section-n"]
 
 !!!5
 %html
@@ -37,46 +35,23 @@
         %link{rel:"stylesheet",href:"./css/styles.css"}
 
     %body
-
         /NavBar
-        %nav.navbar.navbar-toggleable.navbar-inverse.fixed-top
-            %a.navbar-brand{href:"#"}= @title
-            %button.navbar-toggler.navbar-toggler-right{type:"button","data":{"toggle":"collapse", "target":"#MyNavbar" },  "aria":{"controls":"MyNavBar", "expanded":"true"}}
-                %span.navbar-toggler-icon
-            .collapse.navbar-collapse#MyNavbar
-                .navbar-nav
-                    -menu.each do |item|
-                        %a.nav-item.nav-link{href:'#'+"#{item}"}= item
+        %nav
+            = Haml::Engine.new(File.read("./src/layouts/navbar.haml")).render
 
         /Header
-        %header.jumbotron-fluid.text-center
-            %h1.display-2= @title
-            %p.lead= @description
+        %header
+            = Haml::Engine.new(File.read("./src/layouts/header.haml")).render
 
         /Main
         %main
-            -# Please replace this with your own sections (this is just an example)
-            -menu.each do |item|
-                %section.full.text-center{id:"#{item}"}
-                    %h1.display-4= item
-                    .content
-                        %h2 sub-title
-                        %p
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae imperdiet nulla.
-                            Donec dapibus et leo in condimentum. Phasellus eu faucibus orci. Maecenas ullamcorper ex in massa porta fermentum.
-                            Sed tempor urna vitae diam accumsan varius. Proin venenatis dolor in mi sodales, sit amet blandit lectus venenatis.
-                            Duis sagittis laoreet mollis. Morbi imperdiet enim at tortor convallis, id consectetur lacus.
-                        .card
-                            .card-block
-                                %h4.card-title Card title
-                                %p.card-text
-                                    Nulla consectetur suscipit venenatis. In hac habitasse platea dictumst. Proin nec ex sit amet dolor venenatis
-                                    consectetur in vel ex. Nulla non placerat felis. Phasellus euismod condimentum venenatis. Nullam et fringilla
-                                    arcu, eu consequat velit.
+            -# Please replace this wi th your own sections (this is just an example)
+            = Haml::Engine.new(File.read("./src/layouts/section.haml")).render
+
         /Footer
         %footer.w-100
             = Haml::Engine.new(File.read("./src/layouts/social.haml")).render
-            = Haml::Engine.new(File.read("./src/layouts/legal.haml")).render
+            = Haml::Engine.new(File.read("./src/layouts/footer-links.haml")).render
             %p.text-center=@title+" - Develop by "+@autor
 
         /Scripts

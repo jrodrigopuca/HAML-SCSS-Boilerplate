@@ -1,0 +1,13 @@
+-@brand="brand"
+-# Basic nav items/sections
+-menu ={"Link1":"url/link1", "Link2":"url/link2", "Link3":"url/link3", "Linkn":"url/link4"}
+
+.navbar.navbar-toggleable.navbar-inverse.fixed-top
+    %a.navbar-brand{href:"#"}= @brand
+    %button.navbar-toggler.navbar-toggler-right{type:"button","data":{"toggle":"collapse", "target":"#MyNavbar" },  "aria":{"controls":"MyNavBar", "expanded":"true"}}
+        %span.navbar-toggler-icon
+
+    .collapse.navbar-collapse#MyNavbar
+        .navbar-nav
+            -menu.each do |key,value|
+                %a.nav-item.nav-link{href:"#{value}"}= key

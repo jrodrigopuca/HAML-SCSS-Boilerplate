@@ -1,0 +1,6 @@
+-links = { "Privacy": "url/privacy", "Terms": "url/terms", "About us":"url/about-us"}
+
+%ul.list-inline.text-center
+    -links.each do |key, value|
+        %li.list-inline-item
+            %a{href:"#{value}"}=key
