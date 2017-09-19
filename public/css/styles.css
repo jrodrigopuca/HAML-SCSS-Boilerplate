@@ -39,7 +39,7 @@ html, body {
   position: relative; }
 
 .navbar {
-  background-color: #303f9f;
+  background-color: #3f51b5;
   transition: all 0.1s; }
   .navbar .nav-item {
     color: #FFFFFF;
@@ -72,5 +72,3 @@ section {
 
 footer {
   padding: 1em; }
-
-/*# sourceMappingURL=styles.css.map */
