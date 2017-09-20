@@ -1,0 +1,12 @@
+-links = { "Privacy": "url/privacy", "Terms": "url/terms", "About us":"url/about-us"}
+-@author= p_author 
+-@title= p_title
+
+
+%section.w-100
+    %ul.list-inline.text-center
+        -links.each do |key, value|
+            %li.list-inline-item
+                %a{href:"#{value}"}=key
+
+    %p.text-center=@title+" - Develop by "+@author

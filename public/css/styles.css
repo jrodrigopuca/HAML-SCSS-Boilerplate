@@ -69,6 +69,8 @@ section {
     color: #757575; }
   section h1, section .navbar .navbar-brand, .navbar section .navbar-brand {
     color: #303f9f; }
+  section img {
+    margin: 1em; }
 
 footer {
   padding: 1em; }

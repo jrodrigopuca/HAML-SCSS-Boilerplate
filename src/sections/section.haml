@@ -1,0 +1,12 @@
+- require 'YAML'
+- data = YAML.load(File.read("./src/data.yaml"))
+
+- data["posts"].each_with_index do |post, index|
+    %section.full.text-center
+        %h1.display-4= post["title"]
+        .content
+            %img.rounded-circle.w-25.mx-auto{src:"#{post['image']}"}
+            %br
+            %p
+                = post["text"]  
+            %a{href:"#{post['link']}"} more info..

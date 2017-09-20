@@ -1,10 +1,12 @@
 / Boilerplate HAML/SCSS v0.22
 
--# Basic information
--@autor="jarp"
+
+-# Basic information 
+-@author= "jarp"
 -@lang= "en"
 -@title= "Hello World!"
--@description= "My awesome website"
+-@subtitle="My awesome template"
+-@description= "My awesome description"
 -@keywords="keyword1, keyword2, keywordn"
 
 -# Basic libraries
@@ -13,7 +15,6 @@
 -@NormalizeV="5.0.0"
 -@jQueryV="3.1.1"
 -@FontAwesomeV="4.7.0"
-
 
 !!!5
 %html
@@ -25,7 +26,7 @@
         %title= @title
         %meta{name:"description", content:@description}
         %meta{name:"keywords", content:@keywords}
-        %meta{name:"author", content:@autor}
+        %meta{name:"author", content:@author}
         %meta{name:"viewport", content:"width=device-width, initial-scale=1, shrink-to-fit=no"}
 
         /Styles
@@ -41,18 +42,16 @@
 
         /Header
         %header
-            = Haml::Engine.new(File.read("./src/layouts/header.haml")).render
-
+            = Haml::Engine.new(File.read("./src/layouts/header.haml")).render(Object.new,{:p_title=>@title, :p_subtitle=>@subtitle})
         /Main
         %main
-            -# Please replace this wi th your own sections (this is just an example)
-            = Haml::Engine.new(File.read("./src/layouts/section.haml")).render
-
+            -# Please replace this with your own sections (this is just an example)
+            = Haml::Engine.new(File.read("./src/sections/section.haml")).render
+            = Haml::Engine.new(File.read("./src/sections/social.haml")).render
         /Footer
-        %footer.w-100
-            = Haml::Engine.new(File.read("./src/layouts/social.haml")).render
-            = Haml::Engine.new(File.read("./src/layouts/footer-links.haml")).render
-            %p.text-center=@title+" - Develop by "+@autor
+        %footer
+            = Haml::Engine.new(File.read("./src/layouts/footer.haml")).render(Object.new,{:p_title=>@title, :p_author=>@author})
+
 
         /Scripts
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/jquery/"+@jQueryV+"/jquery.js"}
