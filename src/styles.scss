@@ -93,29 +93,30 @@ html,body{
 
 //============Colors
 .navbar{
-    background-color: $primary-color;
+    background-color: $primary-color!important;
     transition: all 0.1s;
-    .nav-item{
-        color:$text-color;
+    .nav-item a{
+        color:$text-color!important;
         opacity: 0.8;
         border-bottom: 3px solid;
         margin: 1px;
         &:focus, &:hover{
             border-bottom: 3px solid;
-            color:$text-color;
+            color:$text-color!important;
             transition: all 0.1s;
             opacity: 1;
         }
     }
     .navbar-brand{
         @extend h1;
+        color:$text-color!important;
     }
 }
 
 .jumbotron-fluid{
     background-color: $primary-color;
     color: $text-color;
-    padding: 9rem 0;
+    padding: 13rem 0;
 }
 
 main{
@@ -130,6 +131,7 @@ section{
     padding: 2em; //use this for navbar fixed
     .container{
         color:$secondary-text-color;
+        padding: 1em;
     }
     h1{
         color:$dark-primary-color;

@@ -39,23 +39,25 @@ html, body {
   position: relative; }
 
 .navbar {
-  background-color: #3f51b5;
+  background-color: #3f51b5 !important;
   transition: all 0.1s; }
-  .navbar .nav-item {
-    color: #FFFFFF;
+  .navbar .nav-item a {
+    color: #FFFFFF !important;
     opacity: 0.8;
     border-bottom: 3px solid;
     margin: 1px; }
-    .navbar .nav-item:focus, .navbar .nav-item:hover {
+    .navbar .nav-item a:focus, .navbar .nav-item a:hover {
       border-bottom: 3px solid;
-      color: #FFFFFF;
+      color: #FFFFFF !important;
       transition: all 0.1s;
       opacity: 1; }
+  .navbar .navbar-brand {
+    color: #FFFFFF !important; }
 
 .jumbotron-fluid {
   background-color: #3f51b5;
   color: #FFFFFF;
-  padding: 9rem 0; }
+  padding: 13rem 0; }
 
 main {
   min-height: 100vh; }
@@ -66,7 +68,8 @@ section {
   background-color: #fafafa;
   padding: 2em; }
   section .container {
-    color: #757575; }
+    color: #757575;
+    padding: 1em; }
   section h1, section .navbar .navbar-brand, .navbar section .navbar-brand {
     color: #303f9f; }
   section img {

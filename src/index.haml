@@ -1,5 +1,5 @@
-/ Boilerplate HAML/SCSS v0.22
-
+/ total_hours_wasted_here: 30
+/ Boilerplate HAML/SCSS commit #18
 
 -# Basic information 
 -@author= "jarp"
@@ -10,10 +10,10 @@
 -@keywords="keyword1, keyword2, keywordn"
 
 -# Basic libraries
--@BootstrapV= "4.0.0-alpha.6"
--@TetherV="1.4.0"
--@NormalizeV="5.0.0"
--@jQueryV="3.1.1"
+-@BootstrapV= "4.0.0-beta"
+-@PopperV="1.12.5"
+-@NormalizeV="7.0.0"
+-@jQueryV="3.2.1"
 -@FontAwesomeV="4.7.0"
 
 !!!5
@@ -30,9 +30,9 @@
         %meta{name:"viewport", content:"width=device-width, initial-scale=1, shrink-to-fit=no"}
 
         /Styles
-        %link{rel:"stylesheet",href:"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/"+@BootstrapV+"/css/bootstrap.min.css"}
         %link{rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/normalize/"+@NormalizeV+"/normalize.min.css"}
         %link{rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/"+@FontAwesomeV+"/css/font-awesome.min.css"}
+        %link{rel:"stylesheet",href:"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/"+@BootstrapV+"/css/bootstrap.min.css"}
         %link{rel:"stylesheet",href:"./css/styles.css"}
 
     %body
@@ -52,10 +52,9 @@
         %footer
             = Haml::Engine.new(File.read("./src/layouts/footer.haml")).render(Object.new,{:p_title=>@title, :p_author=>@author})
 
-
         /Scripts
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/jquery/"+@jQueryV+"/jquery.js"}
-        %script{src:"https://cdnjs.cloudflare.com/ajax/libs/tether/"+@TetherV+"/js/tether.min.js"}
+        %script{src:"https://cdnjs.cloudflare.com/ajax/libs/popper.js/"+@PopperV+"/umd/popper.js"}
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/"+@BootstrapV+"/js/bootstrap.min.js"}
         /%script{src:"js/analytics.js"}
         /%script{async:"true", src:"'https://www.google-analytics.com/analytics.js"}
