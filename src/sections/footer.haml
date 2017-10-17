@@ -3,7 +3,8 @@
 -@title= p_title
 
 
-%section.w-100
+%section.w-100.indigo
+    = Haml::Engine.new(File.read("./src/sections/social.haml")).render
     %ul.list-inline.text-center
         -links.each do |key, value|
             %li.list-inline-item

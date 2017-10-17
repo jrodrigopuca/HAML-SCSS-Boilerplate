@@ -1,5 +1,6 @@
-/ total_hours_wasted_here: 30
-/ Boilerplate HAML/SCSS commit #18
+/ total_hours_here: 43
+/ Boilerplate HAML/SCSS commit #19
+
 
 -# Basic information 
 -@author= "jarp"
@@ -32,30 +33,38 @@
         /Styles
         %link{rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/normalize/"+@NormalizeV+"/normalize.min.css"}
         %link{rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/"+@FontAwesomeV+"/css/font-awesome.min.css"}
+        %link{rel:"stylesheet", href:"https://fonts.googleapis.com/icon?family=Material+Icons"}
         %link{rel:"stylesheet",href:"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/"+@BootstrapV+"/css/bootstrap.min.css"}
+        %link{rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.css"}
         %link{rel:"stylesheet",href:"./css/styles.css"}
 
     %body
         /NavBar
         %nav
-            = Haml::Engine.new(File.read("./src/layouts/navbar.haml")).render
+            = Haml::Engine.new(File.read("./src/sections/navbar.haml")).render
 
         /Header
         %header
-            = Haml::Engine.new(File.read("./src/layouts/header.haml")).render(Object.new,{:p_title=>@title, :p_subtitle=>@subtitle})
+            = Haml::Engine.new(File.read("./src/sections/header.haml")).render(Object.new,{:p_title=>@title, :p_subtitle=>@subtitle})
         /Main
         %main
             -# Please replace this with your own sections (this is just an example)
             = Haml::Engine.new(File.read("./src/sections/section.haml")).render
-            = Haml::Engine.new(File.read("./src/sections/social.haml")).render
+
         /Footer
         %footer
-            = Haml::Engine.new(File.read("./src/layouts/footer.haml")).render(Object.new,{:p_title=>@title, :p_author=>@author})
+            = Haml::Engine.new(File.read("./src/sections/footer.haml")).render(Object.new,{:p_title=>@title, :p_author=>@author})
 
+        .float-block
+            %a.btn.waves-circle.btn-rd{href:"#"}
+                %span
+                    %i.material-icons chat_bubble_outline
+        
         /Scripts
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/jquery/"+@jQueryV+"/jquery.js"}
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/popper.js/"+@PopperV+"/umd/popper.js"}
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/"+@BootstrapV+"/js/bootstrap.min.js"}
-        /%script{src:"js/analytics.js"}
-        /%script{async:"true", src:"'https://www.google-analytics.com/analytics.js"}
+        %script{src:"https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.js"}
+        %script{src:"js/analytics.js"}
+        %script{async:"true", src:"https://www.google-analytics.com/analytics.js"}
         %script{src:"./js/main.js"}

@@ -1,5 +1,5 @@
-<!-- total_hours_wasted_here: 30 -->
-<!-- Boilerplate HAML/SCSS commit #18 -->
+<!-- total_hours_here: 43 -->
+<!-- Boilerplate HAML/SCSS commit #19 -->
 <!DOCTYPE html>
 <html>
 <head class='no-js' lang='en'>
@@ -14,16 +14,20 @@
 <!-- Styles -->
 <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css' rel='stylesheet'>
 <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
 <link href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.css' rel='stylesheet'>
 <link href='./css/styles.css' rel='stylesheet'>
 </head>
 <body>
 <!-- NavBar -->
 <nav>
 <div class='navbar navbar-expand-lg navbar-dark bg-dark'>
-<a class='navbar-brand' href='#'>brand</a>
-<button aria-controls='MyNavBar' aria-expanded='true' class='navbar-toggler navbar-toggler-right' data-target='#MyNavbar' data-toggle='collapse' type='button'>
-<span class='navbar-toggler-icon'></span>
+<div class='navbar-brand'>brand</div>
+<button aria-controls='MyNavBar' aria-expanded='true' class='navbar-toggler navbar-toggler-right waves-float' data-target='#MyNavbar' data-toggle='collapse' type='button'>
+<span>
+<i class='material-icons'>more_vert</i>
+</span>
 </button>
 <div class='collapse navbar-collapse' id='MyNavbar'>
 <ul class='navbar-nav'>
@@ -55,6 +59,8 @@
 <!-- Main -->
 <main>
 <section class='full text-center'>
+<div class='row'>
+<div class='card col-lg-4'>
 <h1 class='display-4'>Card One</h1>
 <div class='content'>
 <img class='rounded-circle w-25 mx-auto' src='https://raw.githubusercontent.com/jrodrigopuca/FrontEnd-Learning/master/images/art-1.png'>
@@ -68,8 +74,8 @@ Duis sagittis laoreet mollis. Morbi imperdiet enim at tortor convallis, id conse
 </p>
 <a href='https://github.com/jrodrigopuca/HAML-SCSS-Boilerplate'>more info..</a>
 </div>
-</section>
-<section class='full text-center'>
+</div>
+<div class='card col-lg-4'>
 <h1 class='display-4'>Card Two</h1>
 <div class='content'>
 <img class='rounded-circle w-25 mx-auto' src='https://raw.githubusercontent.com/jrodrigopuca/FrontEnd-Learning/master/images/art-2.png'>
@@ -85,8 +91,8 @@ Duis sagittis laoreet mollis. Morbi imperdiet enim at tortor convallis, id conse
 </p>
 <a href='https://github.com/jrodrigopuca/HAML-SCSS-Boilerplate'>more info..</a>
 </div>
-</section>
-<section class='full text-center'>
+</div>
+<div class='card col-lg-4'>
 <h1 class='display-4'>Card Three</h1>
 <div class='content'>
 <img class='rounded-circle w-25 mx-auto' src='https://raw.githubusercontent.com/jrodrigopuca/FrontEnd-Learning/master/images/art-3.png'>
@@ -102,10 +108,16 @@ Duis sagittis laoreet mollis. Morbi imperdiet enim at tortor convallis, id conse
 </p>
 <a href='https://github.com/jrodrigopuca/HAML-SCSS-Boilerplate'>more info..</a>
 </div>
+</div>
+</div>
 </section>
 
+</main>
+<!-- Footer -->
+<footer>
+<section class='w-100 indigo'>
 <!-- /Social -->
-<section class='text-center'>
+<div class='text-center'>
 <ul class='list-inline'>
 <li class='list-inline-item'>
 <a href='https://facebook.com/userf'>
@@ -123,12 +135,8 @@ Duis sagittis laoreet mollis. Morbi imperdiet enim at tortor convallis, id conse
 </a>
 </li>
 </ul>
-</section>
+</div>
 
-</main>
-<!-- Footer -->
-<footer>
-<section class='w-100'>
 <ul class='list-inline text-center'>
 <li class='list-inline-item'>
 <a href='url/privacy'>Privacy</a>
@@ -144,12 +152,20 @@ Duis sagittis laoreet mollis. Morbi imperdiet enim at tortor convallis, id conse
 </section>
 
 </footer>
+<div class='float-block'>
+<a class='btn waves-circle btn-rd' href='#'>
+<span>
+<i class='material-icons'>chat_bubble_outline</i>
+</span>
+</a>
+</div>
 <!-- Scripts -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
-<!-- %script{src:"js/analytics.js"} -->
-<!-- %script{async:"true", src:"'https://www.google-analytics.com/analytics.js"} -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.js'></script>
+<script src='js/analytics.js'></script>
+<script async='true' src='https://www.google-analytics.com/analytics.js'></script>
 <script src='./js/main.js'></script>
 </body>
 </html>

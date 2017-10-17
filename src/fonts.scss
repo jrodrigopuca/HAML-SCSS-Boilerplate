@@ -1,0 +1,28 @@
+//======== Fonts ==============
+$familyH: "Alfa Slab One";  //Header font
+$familyB: "Raleway"; //Body font
+
+@function miFuente($nombre){
+    $vuelta:"";
+    @for $i from 1 through str-length($nombre){
+        $local:str-slice($nombre, $i,$end-at:$i);
+        @if ($local == " "){
+            $vuelta: $vuelta +"+";
+        }
+        @else{
+            $vuelta: $vuelta + $local;
+        }
+
+    }
+    @return $vuelta;
+}
+
+@import url("https://fonts.googleapis.com/css?family=#{miFuente($familyB)}");
+body{
+    font-family: $familyB,Roboto,'Segoe UI', Tahoma, sans-serif;;
+}
+
+@import url("https://fonts.googleapis.com/css?family=#{miFuente($familyH)}");
+h1,h2,h3,h4{
+    font-family: $familyH;
+}

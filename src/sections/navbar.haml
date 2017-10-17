@@ -3,9 +3,10 @@
 -menu={"Link1":"url/link1", "Link2":"url/link2", "Link3":"url/link3", "Linkn":"url/link4"}
 
 .navbar.navbar-expand-lg.navbar-dark.bg-dark
-    %a.navbar-brand{href:"#"}= @brand
-    %button.navbar-toggler.navbar-toggler-right{type:"button","data":{"toggle":"collapse", "target":"#MyNavbar" },  "aria":{"controls":"MyNavBar", "expanded":"true"}}
-        %span.navbar-toggler-icon
+    .navbar-brand= @brand
+    %button.navbar-toggler.navbar-toggler-right.waves-float{type:"button","data":{"toggle":"collapse", "target":"#MyNavbar" },  "aria":{"controls":"MyNavBar", "expanded":"true"}}
+        %span
+            %i.material-icons more_vert
 
     .collapse.navbar-collapse#MyNavbar
         %ul.navbar-nav
