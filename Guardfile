@@ -23,9 +23,6 @@
 # notifications: true                send notifictions to Growl/libnotify/Notifu
 # haml_options: { ugly: true }    pass options to the Haml engine
 
-#guard :haml do
-#  watch(/^.+(\.html\.haml)$/)
-#end
-
 guard :haml, input: 'src', output:'public', run_at_start:'true'
 guard :sass, input:'src', output: 'public/css', run_at_start:'true'
+guard :rack, config:'config.ru', environment: 'development'

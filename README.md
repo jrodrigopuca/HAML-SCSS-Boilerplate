@@ -1,6 +1,11 @@
 # HAML-SCSS-Boilerplate
 This is a simple front-end template (HAML + SCSS)
 
+
+bundle exec guard
+Configuración basada en: https://devcenter.heroku.com/articles/static-sites-ruby
+
+
 ## How-to use
 - Customize template
 - Generate HTML/CSS

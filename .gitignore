@@ -1,4 +1,6 @@
 # Results
 *.sass-cache
 *.css.map
+public/
 Gemfile.lock
+.aux
